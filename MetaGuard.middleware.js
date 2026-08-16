@@ -1,6 +1,6 @@
 import { validateContext, getUser } from './util/Context.js'
 
-import { PRINCIPIA_FEDERATION_ID, BaseErrors } from '@principia/common'
+import { PRINCIPIA_FEDERATION_ID, BaseErrors } from '@empyria/common'
 
 /**
  * Builds the shared guard logic for `localAction`/`remoteAction` hooks: validates the

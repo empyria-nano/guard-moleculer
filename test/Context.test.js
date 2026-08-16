@@ -7,7 +7,7 @@ import {
 	timeStamped,
 	checkDefined,
 } from '../util/Context.js'
-import { PrincipiaError } from '@principia/common'
+import { PrincipiaError } from '@empyria/common'
 
 describe('getParams', () => {
 	test('unwraps a body.packet envelope', () => {

@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'bun:test'
 import { MetaGuard } from '../MetaGuard.middleware.js'
-import { PrincipiaError } from '@principia/common'
+import { PrincipiaError } from '@empyria/common'
 
 const action = (name) => ({ name, service: { meta: {} } })
 const ctxWithUser = (federation = 'my-fed', extra = {}) => ({

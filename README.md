@@ -1,4 +1,4 @@
-# @principia/moleculer
+# @empyria/moleculer
 
 Moleculer helpers for **Principia**, a nanoservice framework built primarily on Bun:
 a base service mixin, and a context-validating guard middleware against unwanted
@@ -9,21 +9,21 @@ a base service mixin, and a context-validating guard middleware against unwanted
 - Bun `>=1.4.0` or Node.js `>=26`
 - Plain ESM, no build step, no TypeScript
 
-Both requirements come from [@principia/classification](https://github.com/imrefazekas/principia-classification)
-and [@principia/common](https://github.com/imrefazekas/principia-common), which this package
+Both requirements come from [@empyria/classification](https://github.com/imrefazekas/empyria-classification)
+and [@empyria/common](https://github.com/imrefazekas/empyria-common), which this package
 depends on and which use the native `Temporal` global for all date/time handling.
 
 ## Install
 
 ```bash
-bun add @principia/moleculer
+bun add @empyria/moleculer
 ```
 
 ## Usage
 
 ```js
 import { ServiceBroker } from 'moleculer'
-import { BaseMixin, MetaGuard } from '@principia/moleculer'
+import { BaseMixin, MetaGuard } from '@empyria/moleculer'
 
 const broker = new ServiceBroker({
 	middlewares: [MetaGuard({ resolveUser: true, whitelistedActions: ['v1.Internal.action'] })],
@@ -44,8 +44,8 @@ Everything is re-exported from the package root via [Mixins.js](./Mixins.js). Th
 connection helper and lower-level utilities are separate subpath exports, importable directly:
 
 ```js
-import { connect } from '@principia/moleculer/Connector.js'
-import { hashPassword, verifyPassword } from '@principia/moleculer/util/Crypto.js'
+import { connect } from '@empyria/moleculer/Connector.js'
+import { hashPassword, verifyPassword } from '@empyria/moleculer/util/Crypto.js'
 ```
 
 ## Modules
@@ -62,10 +62,10 @@ import { hashPassword, verifyPassword } from '@principia/moleculer/util/Crypto.j
 
 ### Known limitation: `ConnectorMixin`
 
-`mixins/Connector.mixin.js` imports `@principia/redis` and `@principia/mongo`, which aren't
+`mixins/Connector.mixin.js` imports `@empyria/redis` and `@empyria/mongo`, which aren't
 published as standalone packages yet. It's intentionally left out of the [Mixins.js](./Mixins.js)
 barrel so the rest of the package stays importable — until those two are published, use it only
-via a direct subpath import (`@principia/moleculer/mixins/Connector.mixin.js`), where it will
+via a direct subpath import (`@empyria/moleculer/mixins/Connector.mixin.js`), where it will
 fail to resolve.
 
 Every exported function is documented with JSDoc directly in its source file — hovering

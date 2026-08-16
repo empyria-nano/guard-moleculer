@@ -1,7 +1,7 @@
 import { describe, test, expect, afterEach } from 'bun:test'
 import { ServiceBroker } from 'moleculer'
 import { BaseMixin } from '../mixins/Base.mixin.js'
-import { PRINCIPIA_FEDERATION_ID, MOLECULER_SERVICE_ROLE } from '@principia/common'
+import { PRINCIPIA_FEDERATION_ID, MOLECULER_SERVICE_ROLE } from '@empyria/common'
 
 let broker
 

@@ -7,8 +7,8 @@ actions/events against unwanted cross-federation access), and lower-level `Conne
 
 ## Runtime
 
-- Requires Bun `>=1.4.0` or Node.js `>=26`, inherited from `@principia/classification`'s use
-  of native `Temporal`. Both `@principia/classification` and `@principia/common` are **git
+- Requires Bun `>=1.4.0` or Node.js `>=26`, inherited from `@empyria/classification`'s use
+  of native `Temporal`. Both `@empyria/classification` and `@empyria/common` are **git
   dependencies** — this package only sees their pushed commits, not local working-tree changes
   in sibling repos.
 - Plain ESM, no TypeScript, no build step.
@@ -17,7 +17,7 @@ actions/events against unwanted cross-federation access), and lower-level `Conne
 
 ## Known incomplete module
 
-`mixins/Connector.mixin.js` imports `@principia/redis` and `@principia/mongo`, which aren't
+`mixins/Connector.mixin.js` imports `@empyria/redis` and `@empyria/mongo`, which aren't
 published as standalone packages yet (they still live inside the monolithic `principia` repo's
 `libs/`). It is **not** re-exported from [Mixins.js](./Mixins.js) — re-adding that export line
 before those two packages exist would break every consumer's import of this whole package. Only

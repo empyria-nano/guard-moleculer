@@ -4,7 +4,7 @@ import { randomUUID } from 'crypto'
 
 import { fileURLToPath } from 'url'
 
-import { PRINCIPIA_FEDERATION_ID, MOLECULER_SERVICE_ROLE, moleculerMeta } from '@principia/common'
+import { PRINCIPIA_FEDERATION_ID, MOLECULER_SERVICE_ROLE, moleculerMeta } from '@empyria/common'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)

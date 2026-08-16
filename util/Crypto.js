@@ -11,7 +11,7 @@ import {
 } from 'node:crypto'
 import { promisify } from 'node:util'
 
-import { now } from '@principia/classification'
+import { now } from '@empyria/classification'
 
 const scryptAsync = promisify(scrypt)
 

@@ -1,10 +1,10 @@
 // NOTE: not yet re-exported from ./Mixins.js — see the comment there. Requires
-// `@principia/redis` and `@principia/mongo`, which aren't published as standalone
+// `@empyria/redis` and `@empyria/mongo`, which aren't published as standalone
 // packages yet, so importing this file will currently fail to resolve.
-import { OK } from '@principia/classification'
+import { OK } from '@empyria/classification'
 
-import { RedisHelper } from '@principia/redis'
-import { connect, terminate } from '@principia/mongo'
+import { RedisHelper } from '@empyria/redis'
+import { connect, terminate } from '@empyria/mongo'
 
 import { BaseMixin } from './Base.mixin.js'
 

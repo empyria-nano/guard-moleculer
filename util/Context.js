@@ -1,5 +1,5 @@
-import { Time, cloneDefined } from '@principia/classification'
-import { BaseErrors } from '@principia/common'
+import { Time, cloneDefined } from '@empyria/classification'
+import { BaseErrors } from '@empyria/common'
 
 /**
  * Extracts an action's actual input, unwrapping gateway/transport envelopes.
