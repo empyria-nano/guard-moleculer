@@ -4,7 +4,7 @@ import { randomUUID } from 'crypto'
 
 import { fileURLToPath } from 'url'
 
-import { PRINCIPIA_FEDERATION_ID, MOLECULER_SERVICE_ROLE, moleculerMeta } from '@empyria/common'
+import { EMPYRIA_FEDERATION_ID, MOLECULER_SERVICE_ROLE, moleculerMeta } from '@empyria/common'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -14,8 +14,8 @@ const VERSION = JSON.parse(
 ).version
 
 /**
- * Base Moleculer mixin every Principia service builds on. On `started`, stamps a
- * Principia-flavored `meta` (actor/federation/flow/process IDs) onto the service, and
+ * Base Moleculer mixin every Empyria service builds on. On `started`, stamps a
+ * Empyria-flavored `meta` (actor/federation/flow/process IDs) onto the service, and
  * exposes the running package version as both a method and an action.
  */
 export const BaseMixin = {
@@ -30,7 +30,7 @@ export const BaseMixin = {
 
 		this.meta = moleculerMeta({
 			actor: `${this.name}-service`,
-			federation: PRINCIPIA_FEDERATION_ID,
+			federation: EMPYRIA_FEDERATION_ID,
 			flowID: randomUUID(),
 			processID: randomUUID(),
 			role: MOLECULER_SERVICE_ROLE,

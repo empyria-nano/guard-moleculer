@@ -1,7 +1,7 @@
 # AGENTS.md
 
-Moleculer helpers for **Principia**, a nanoservice framework built primarily on Bun:
-`BaseMixin` (per-service Principia meta stamping), `MetaGuard` (a middleware guarding
+Moleculer helpers for **Empyria**, a nanoservice framework built primarily on Bun:
+`BaseMixin` (per-service Empyria meta stamping), `MetaGuard` (a middleware guarding
 actions/events against unwanted cross-federation access), and lower-level `Connector.js`/
 `util/` helpers.
 
@@ -18,7 +18,7 @@ actions/events against unwanted cross-federation access), and lower-level `Conne
 ## Known incomplete module
 
 `mixins/Connector.mixin.js` imports `@empyria/redis` and `@empyria/mongo`, which aren't
-published as standalone packages yet (they still live inside the monolithic `principia` repo's
+published as standalone packages yet (they still live inside the monolithic `empyria` repo's
 `libs/`). It is **not** re-exported from [Mixins.js](./Mixins.js) — re-adding that export line
 before those two packages exist would break every consumer's import of this whole package. Only
 re-export it once both are published; the file itself has a comment marking this.

@@ -1,6 +1,6 @@
 import { validateContext, getUser } from './util/Context.js'
 
-import { PRINCIPIA_FEDERATION_ID, BaseErrors } from '@empyria/common'
+import { EMPYRIA_FEDERATION_ID, BaseErrors } from '@empyria/common'
 
 /**
  * Builds the shared guard logic for `localAction`/`remoteAction` hooks: validates the
@@ -16,10 +16,7 @@ function guardAction(next, action, resolveUser, whitelistedActions) {
 	return async (ctx) => {
 		const { user } = validateContext(ctx, action)
 
-		if (
-			whitelistedActions.includes(action.name) &&
-			user.federation !== PRINCIPIA_FEDERATION_ID
-		) {
+		if (whitelistedActions.includes(action.name) && user.federation !== EMPYRIA_FEDERATION_ID) {
 			throw new BaseErrors.ServiceVoilation({
 				service: `Microservice ${ctx.action?.name || action.name} communication`,
 			})

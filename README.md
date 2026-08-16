@@ -1,6 +1,6 @@
 # @empyria/moleculer
 
-Moleculer helpers for **Principia**, a nanoservice framework built primarily on Bun:
+Moleculer helpers for **Empyria**, a nanoservice framework built primarily on Bun:
 a base service mixin, and a context-validating guard middleware against unwanted
 (unauthenticated or cross-federation) access.
 
@@ -50,15 +50,15 @@ import { hashPassword, verifyPassword } from '@empyria/moleculer/util/Crypto.js'
 
 ## Modules
 
-| Module                                                   | Purpose                                                                                                                      |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| [Mixins.js](./Mixins.js)                                 | Package entry point; re-exports `BaseMixin` and `MetaGuard`.                                                                 |
-| [MetaGuard.middleware.js](./MetaGuard.middleware.js)     | `MetaGuard` — a Moleculer middleware guarding actions/events against unwanted access, with optional caller resolution.       |
-| [mixins/Base.mixin.js](./mixins/Base.mixin.js)           | `BaseMixin` — stamps a Principia meta (actor/federation/flow/process IDs) on service start, and exposes the package version. |
-| [mixins/Connector.mixin.js](./mixins/Connector.mixin.js) | `ConnectorMixin` — adds optional Redis/Mongo setup. **Not yet exported from `Mixins.js`** — see below.                       |
-| [Connector.js](./Connector.js)                           | `connect` — starts a Moleculer broker and waits for required services.                                                       |
-| [util/Context.js](./util/Context.js)                     | Context helpers: `getParams`, `getUser`, `validateContext`, `actionStamped`, `timeStamped`, `checkDefined`.                  |
-| [util/Crypto.js](./util/Crypto.js)                       | Hashing, Ed25519 signing/verification, and password hashing (`hashPassword`/`verifyPassword`).                               |
+| Module                                                   | Purpose                                                                                                                    |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [Mixins.js](./Mixins.js)                                 | Package entry point; re-exports `BaseMixin` and `MetaGuard`.                                                               |
+| [MetaGuard.middleware.js](./MetaGuard.middleware.js)     | `MetaGuard` — a Moleculer middleware guarding actions/events against unwanted access, with optional caller resolution.     |
+| [mixins/Base.mixin.js](./mixins/Base.mixin.js)           | `BaseMixin` — stamps a Empyria meta (actor/federation/flow/process IDs) on service start, and exposes the package version. |
+| [mixins/Connector.mixin.js](./mixins/Connector.mixin.js) | `ConnectorMixin` — adds optional Redis/Mongo setup. **Not yet exported from `Mixins.js`** — see below.                     |
+| [Connector.js](./Connector.js)                           | `connect` — starts a Moleculer broker and waits for required services.                                                     |
+| [util/Context.js](./util/Context.js)                     | Context helpers: `getParams`, `getUser`, `validateContext`, `actionStamped`, `timeStamped`, `checkDefined`.                |
+| [util/Crypto.js](./util/Crypto.js)                       | Hashing, Ed25519 signing/verification, and password hashing (`hashPassword`/`verifyPassword`).                             |
 
 ### Known limitation: `ConnectorMixin`
 

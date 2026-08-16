@@ -34,7 +34,7 @@ export function getUser(ctx, action) {
  * @param {Object} [action] - The action/event being guarded.
  * @returns {{user: Object, tokenKey: string}|undefined} The context's user/tokenKey, or
  *   `undefined` for a `$`-prefixed internal action.
- * @throws {PrincipiaError} `BaseErrors.ServiceVoilation` if `ctx.meta.user` is missing or incomplete.
+ * @throws {EmpyriaError} `BaseErrors.ServiceVoilation` if `ctx.meta.user` is missing or incomplete.
  */
 export function validateContext(ctx, action) {
 	const { user, tokenKey } = ctx.meta
@@ -82,7 +82,7 @@ export function timeStamped(object) {
  * at least one to be present.
  * @param {Object} object - Object to filter.
  * @returns {Object} The defined-only copy.
- * @throws {PrincipiaError} `BaseErrors.MissingData` if no properties are defined.
+ * @throws {EmpyriaError} `BaseErrors.MissingData` if no properties are defined.
  */
 export function checkDefined(object) {
 	const res = cloneDefined(object)

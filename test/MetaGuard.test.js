@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'bun:test'
 import { MetaGuard } from '../MetaGuard.middleware.js'
-import { PrincipiaError } from '@empyria/common'
+import { EmpyriaError } from '@empyria/common'
 
 const action = (name) => ({ name, service: { meta: {} } })
 const ctxWithUser = (federation = 'my-fed', extra = {}) => ({
@@ -22,7 +22,7 @@ describe('MetaGuard: localAction / remoteAction', () => {
 		const guard = MetaGuard({ resolveUser: false })
 		await expect(
 			guard.localAction(async () => 'ok', action('v1.Test.action'))({ meta: {} }),
-		).rejects.toThrow(PrincipiaError)
+		).rejects.toThrow(EmpyriaError)
 	})
 
 	test('rejects a cross-federation call to a whitelisted action', async () => {
@@ -37,7 +37,7 @@ describe('MetaGuard: localAction / remoteAction', () => {
 				async () => 'ok',
 				action('v1.Restricted.action'),
 			)(ctxWithUser('other-federation')),
-		).rejects.toThrow(PrincipiaError)
+		).rejects.toThrow(EmpyriaError)
 	})
 
 	test('allows a same-federation call to a whitelisted action', async () => {
@@ -103,6 +103,6 @@ describe('MetaGuard: localEvent', () => {
 		const guard = MetaGuard({ resolveUser: false })
 		await expect(
 			guard.localEvent(async () => 'ok', action('some.event'))({ meta: {} }),
-		).rejects.toThrow(PrincipiaError)
+		).rejects.toThrow(EmpyriaError)
 	})
 })

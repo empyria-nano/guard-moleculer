@@ -7,7 +7,7 @@ import {
 	timeStamped,
 	checkDefined,
 } from '../util/Context.js'
-import { PrincipiaError } from '@empyria/common'
+import { EmpyriaError } from '@empyria/common'
 
 describe('getParams', () => {
 	test('unwraps a body.packet envelope', () => {
@@ -62,7 +62,7 @@ describe('validateContext', () => {
 
 	test('throws when the context has no authenticated user', () => {
 		const ctx = { meta: {} }
-		expect(() => validateContext(ctx, { name: 'v1.Test.action' })).toThrow(PrincipiaError)
+		expect(() => validateContext(ctx, { name: 'v1.Test.action' })).toThrow(EmpyriaError)
 	})
 })
 
@@ -101,6 +101,6 @@ describe('checkDefined', () => {
 	})
 
 	test('throws when nothing is defined', () => {
-		expect(() => checkDefined({ a: undefined, b: null })).toThrow(PrincipiaError)
+		expect(() => checkDefined({ a: undefined, b: null })).toThrow(EmpyriaError)
 	})
 })
