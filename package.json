@@ -1,6 +1,6 @@
 {
 	"name": "@empyria/moleculer",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Moleculer helpers for Empyria",
 	"license": "MIT",
 	"author": "Imre Fazekas <imre.fazekas@icloud.com>",
