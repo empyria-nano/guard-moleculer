@@ -1,6 +1,6 @@
 {
 	"name": "@empyria/moleculer",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Moleculer helpers for Empyria",
 	"license": "MIT",
 	"author": "Imre Fazekas <imre.fazekas@icloud.com>",
@@ -26,13 +26,13 @@
 		"test:watch": "bun test --watch"
 	},
 	"dependencies": {
-		"@empyria/classification": "0.1.2",
-		"@empyria/common": "0.1.2",
+		"@empyria/classification": "0.1.3",
+		"@empyria/common": "0.1.3",
 		"moleculer": "0.15.1"
 	},
 	"devDependencies": {
-		"oxfmt": "0.64.0",
-		"oxlint": "1.79.0"
+		"oxfmt": "0.65.0",
+		"oxlint": "1.80.0"
 	},
 	"engines": {
 		"bun": ">=1.4.0",
