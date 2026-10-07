@@ -1,0 +1,42 @@
+{
+	"name": "@empyria/moleculer",
+	"version": "0.1.22",
+	"description": "Moleculer helpers for Empyria",
+	"license": "MIT",
+	"author": "Imre Fazekas <imre.fazekas@icloud.com>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/empyria-nano/guard-moleculer.git"
+	},
+	"type": "module",
+	"main": "./Mixins.js",
+	"exports": {
+		".": "./Mixins.js",
+		"./Connector.js": "./Connector.js",
+		"./mixins/*": "./mixins/*.js",
+		"./util/*": "./util/*.js",
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"format": "bun oxfmt --check",
+		"format:fix": "bun oxfmt",
+		"lint": "bun oxlint",
+		"lint:fix": "bun oxlint --fix",
+		"test": "bun test --coverage",
+		"test:watch": "bun test --watch"
+	},
+	"dependencies": {
+		"@empyria/classification": "0.1.10",
+		"@empyria/common": "0.3.12",
+		"moleculer": "0.15.2"
+	},
+	"devDependencies": {
+		"oxfmt": "0.72.0",
+		"oxlint": "1.87.0"
+	},
+	"engines": {
+		"bun": ">=1.4.2",
+		"node": ">=26"
+	},
+	"packageManager": "bun@1.4.2"
+}
